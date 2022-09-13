@@ -1,0 +1,126 @@
+body{
+    margin: auto;
+    min-width: 480px;
+    max-width: 959px;
+    background-size: 100%; 
+    background-attachment: fixed;
+    margin-top: 20px;
+    background-image: url(./img/code.jpg);
+    display: grid;
+
+    grid-template-columns:1fr;
+    grid-template-areas:
+    "a1"
+    "a2"
+    "a3"
+    "a4";
+}
+body > header{ grid-area:a1;}
+main{ grid-area:a2;}
+aside{ grid-area:a3;}
+footer{ grid-area:a4;}
+
+
+body > header, main, aside, footer{
+    background-color: #fff;  
+    margin: 5px;  
+}
+
+
+header > * {
+    width: 100%;
+    
+}
+
+h1, h2{
+    text-align: center;
+}
+
+p, h4, h3{
+    padding-left: 10px;
+}
+
+header h4{
+    color: purple;
+    text-decoration: underline;
+}
+
+section h3 {
+    color: gray;
+    text-decoration: underline;
+}
+
+
+@media only screen and (min-width: 960px) {
+    body {
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-areas:
+        "a1 a1 a1"
+        "a2 a2 a3"
+        "a4 a4 a4";
+    }
+
+    body > header{
+
+        background-color: transparent;
+        color: #fff;
+        display: grid;
+        grid-template-columns:2fr 2fr 1fr;
+        grid-template-areas:
+        ". b1 ."
+        "b2 b3 b4";
+    }
+
+    header > h1{ grid-area:b1; font-size: 50px; text-align: center; margin: auto;}
+    header > img{ grid-area:b2;}
+    header > .contact{ grid-area:b3;}
+    header > .reseaux{ grid-area:b4;}
+    
+    header h4 {
+        color: #fff;
+    }
+
+    header > img {
+        height: 100%;
+    }
+
+  }
+
+  @media only screen and (min-width: 1060px) {
+    body {
+        max-width: 2000px;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-areas:
+        "a1 a2 a3"
+        "a4 a4 a4";
+    }
+
+    body > header{
+
+        background-color: #fff;
+        color: #000;
+        display: grid;
+        grid-template-columns:1fr;
+            grid-template-areas:
+            "b2"
+            "b1"
+            "b3"
+            "b4";
+    }
+
+    header > h1{ grid-area:b1; font-size: 50px; text-align: center; margin: auto;}
+    header > img{ grid-area:b2;}
+    header > .contact{ grid-area:b3;}
+    header > .reseaux{ grid-area:b4;}
+    
+    header h4 {
+        color: #000;
+    }
+
+    header > img {
+        height: 100%;
+    }
+
+  }
+
+  
