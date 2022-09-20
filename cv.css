@@ -65,15 +65,14 @@ section h3 {
       display: grid;
       grid-template-columns:2fr 2fr 1fr;
         grid-template-areas:
-        ". b1 ."
+        "b1 b1 b1"
         "b2 b3 b4";
         margin-top: 0px;
     }
     
     header > h1 {
         color: #fff;
-        /*width: 150%;*/
-        /*background-color: #fff;*/
+        padding: 20px;
     }
     header > h1{ grid-area:b1; font-size: 50px; text-align: center; margin: auto;}
     header > img{ grid-area:b2;}
